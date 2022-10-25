@@ -33,3 +33,4 @@ jobs:
           context: ${{ matrix.location }}/
           file: ${{ matrix.location }}/Dockerfile
           push: false
+          tags: ruudvanderweijde/opencost:latest
