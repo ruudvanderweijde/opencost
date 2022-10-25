@@ -29,4 +29,4 @@ jobs:
         with:
           context: ${{ matrix.location }}/
           file: ${{ matrix.location }}/Dockerfile
-          push: false
+          push: true
