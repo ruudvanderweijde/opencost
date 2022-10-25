@@ -7,7 +7,7 @@ import (
 	"github.com/opencost/opencost/pkg/log"
 
 	appsv1 "k8s.io/api/apps/v1"
-	autoscaling "k8s.io/api/autoscaling/v2beta1"
+	autoscaling "k8s.io/api/autoscaling/v2"
 	batchv1 "k8s.io/api/batch/v1"
 	v1 "k8s.io/api/core/v1"
 	"k8s.io/api/policy/v1beta1"
@@ -107,7 +107,7 @@ func NewKubernetesClusterCache(client kubernetes.Interface) ClusterCache {
 	appsRestClient := client.AppsV1().RESTClient()
 	storageRestClient := client.StorageV1().RESTClient()
 	batchClient := client.BatchV1().RESTClient()
-	autoscalingClient := client.AutoscalingV2beta1().RESTClient()
+	autoscalingClient := client.AutoscalingV2().RESTClient()
 	pdbClient := client.PolicyV1beta1().RESTClient()
 
 	kubecostNamespace := env.GetKubecostNamespace()
