@@ -23,7 +23,7 @@ RUN set -e ;\
     go test ./test/*.go;\
     go test ./pkg/*;\
     cd cmd/costmodel;\
-    GOOS=linux \
+    GOARCH=amd64 GOOS=linux \
     go build -a -installsuffix cgo \
     -ldflags \
     "-X github.com/opencost/opencost/pkg/version.Version=${version} \
